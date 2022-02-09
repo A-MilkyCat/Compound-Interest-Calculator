@@ -8,7 +8,7 @@ function check_rate(){
         if (rate == "") throw "請輸入數字";
         if (isNaN(rate)==true) throw "請輸入數字"
         rate = Number(rate);
-        if (rate<0) throw "請輸入正整數";
+        if (rate<0 || (rate-Math.floor(rate))!=0) throw "請輸入正整數";
     }catch(w){
         debug.innerText = w;
         rate = 0;
@@ -54,5 +54,5 @@ function calculate(){
     for(var i=1;i<=year;i++){
         output = output*(1+rate/100);
     }
-    ans.innerText = output;
+    ans.innerText = Math.round(output);
 }

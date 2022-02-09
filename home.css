@@ -26,3 +26,8 @@
     height: 40px;
     margin: 20px;
 }
+.container{
+    /* display: flex; */
+    background-color: rgb(80, 127, 180);
+    text-align: center;
+}
